@@ -1,10 +1,12 @@
 # ROS node for ATI Mini45 Force Sensor
 
+Interfaces with the ATI Mini45 force sensor through USB (idk to what protocol) and publishes the readings to ```/force_measurements```.
+
 ## Running the Node
 
-For example:
+To run the node use:
 ```
-roslaunch force_sensor_ros_interface main.launch
+roslaunch ros_ati_mini45 main.launch
 ```
 
 The arguments and their default values can be seen below.
@@ -13,6 +15,9 @@ The arguments and their default values can be seen below.
 
 For example:
 ```
-roslaunch force_sensor_ros_interface main.launch com_port:="ttyACM0"
+roslaunch ros_ati_mini45 main.launch com_port:="/dev/ttyACM0"
 ```
+
+
+
 
