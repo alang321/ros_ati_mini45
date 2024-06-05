@@ -1,0 +1,10 @@
+<launch>
+	<arg name="com_port" default="/dev/ttyUSB0"/>
+	<arg name="baud_rate" default="19200"/>
+
+  	<node name="ros_ati_mini45_node" pkg="ros_ati_mini45" type="ros_ati_mini45_node.py" output="screen">
+		<param name="com_port" value="$(arg com_port)"/>
+		<param name="baud_rate" value="$(arg baud_rate)"/>
+	</node>
+</launch>
+
