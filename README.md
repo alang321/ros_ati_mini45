@@ -18,6 +18,11 @@ For example:
 roslaunch ros_ati_mini45 main.launch com_port:="/dev/ttyACM0"
 ```
 
+The node also supports zeroing the force sensor, an example command can be seen below:
+```
+rostopic pub /zero_force_sensor ros_ati_mini45/ZeroingDuration "{ duration: 3 }"
+```
 
+Where the duration is in seconds and controls how long the sensor data is averaged for zeroing.
 
 

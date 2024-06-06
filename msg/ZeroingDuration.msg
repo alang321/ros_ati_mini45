@@ -1,0 +1,1 @@
+float32 duration # for how long to zero in seconds

@@ -10,7 +10,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_python_setup()
 
 
-add_message_files(DIRECTORY msg FILES ForceMeasurement.msg)
+add_message_files(DIRECTORY msg FILES ForceMeasurement.msg ZeroingDuration.msg)
 
 
 generate_messages(DEPENDENCIES std_msgs)
