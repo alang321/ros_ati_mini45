@@ -20,12 +20,6 @@ catkin_install_python(PROGRAMS
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}/ros_ati_mini45
 )
 
-catkin_install_python(PROGRAMS
-src/scripts/__init__.py
-src/scripts/ft_interface.py
-src/scripts/preprocessing.py
-DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}/ros_ati_mini45/scripts
-)
 install(FILES
   launch/main.launch
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/ros_ati_mini45

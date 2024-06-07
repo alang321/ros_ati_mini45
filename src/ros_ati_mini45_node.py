@@ -32,7 +32,10 @@ def force_sensor_interface():
 
     pub_feedback = rospy.Publisher('force_measurements', ForceMeasurement, queue_size=10)
 
-    instrument = fif.instrument_setup(com_port, baudrate)  # select USB port and baudrate (19200=100Hz / 115200=500Hz / 1250000=7000Hz)
+    rospy.loginfo("Trying to connect to ATI Mini45")
+    instrument = fif.instrument_setup(com_port, baudrate)
+    #instrument = fif.instrument_setup('/dev/ttyUSB0', 19200)
+    rospy.loginfo("ATI Mini45 connected")
 
     calib = fif.calibration(instrument)
     calib_mat = pre.calibration_matrix(calib)
