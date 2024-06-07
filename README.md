@@ -4,6 +4,7 @@ Interfaces with the ATI Mini45 force sensor through USB (idk to what protocol) a
 
 Before building use this command in the workspace root:
 ```
+pip3 install minimalmodbus
 rosdep install --from-paths src --ignore-src -r -y
 ```
 
