@@ -1,10 +1,10 @@
 import rospy
 from ros_ati_mini45.msg import ForceMeasurement
 from ros_ati_mini45.msg import ZeroingDuration
-import ft_interface as fif
+import scripts.ft_interface as fif
 import time
 import std_msgs.msg
-import preprocessing as pre
+import scripts.preprocessing as pre
 import numpy as np
 import struct
 import math
