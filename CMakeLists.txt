@@ -17,8 +17,6 @@ generate_messages(DEPENDENCIES std_msgs)
 
 catkin_install_python(PROGRAMS
   src/ros_ati_mini45_node.py
-  src/scripts/ft_interface.py
-  src/scripts/preprocessing.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}/ros_ati_mini45
 )
 
