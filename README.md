@@ -2,6 +2,11 @@
 
 Interfaces with the ATI Mini45 force sensor through USB (idk to what protocol) and publishes the readings to ```/force_measurements```.
 
+Before building use this command in the workspace root:
+```
+rosdep install --from-paths src --ignore-src -r -y
+```
+
 ## Running the Node
 
 To run the node use:
