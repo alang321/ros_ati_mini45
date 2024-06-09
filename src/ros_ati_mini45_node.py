@@ -84,7 +84,6 @@ def publish_values(pub_feedback, calib_mat, scaling_factors, instrument):
         data = instrument.serial.read(13)
         if len(data) != 13 or (sum(data[:12]) & 0x7f) != (data[12] & 0x7f) or data[12] & 128:
             rospy.loginfo("Invalid sample received")
-            instrument.serial.flush()
         else:
             gage_vector = np.array([struct.unpack('>h', data[j:j + 2])[0] for j in (0, 6, 2, 8, 4, 10)])
             values = (calib_mat @ gage_vector) / scaling_factors
